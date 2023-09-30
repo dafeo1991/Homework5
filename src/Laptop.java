@@ -1,8 +1,10 @@
-import java.util.*;
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 public class Laptop {
 
-   private String model;
+    private String model;
 
     private String operatingSystem;
 
@@ -16,10 +18,11 @@ public class Laptop {
 
     private String colour;
 
-public Laptop(){
+    public Laptop() {
 
-}
-    public Laptop(String model, String operatingSystem, int processor, int randomAccessMemory, double diagonal, double weight, String colour){
+    }
+
+    public Laptop(String model, String operatingSystem, int processor, int randomAccessMemory, double diagonal, double weight, String colour) {
         this.model = model;
         this.operatingSystem = operatingSystem;
         this.processor = processor;
@@ -44,58 +47,58 @@ public Laptop(){
         String num = scan.nextLine();
 
         for (int i = 0; i < num.length(); i++) {
-            if(1 == Character.getNumericValue(num.charAt(i))) {
+            if (1 == Character.getNumericValue(num.charAt(i))) {
                 System.out.println("Введите минимальную частоту процессора в ГЦ");
                 String minimumFrequency = scan.nextLine();
                 int intMinimumFrequency = Integer.parseInt(minimumFrequency);
                 for (Laptop temp : set) {
-                    if (intMinimumFrequency > temp.processor){
+                    if (intMinimumFrequency > temp.processor) {
                         setLaptop.remove(temp);
                     }
                 }
-                if (intMinimumFrequency >= 2401){
+                if (intMinimumFrequency >= 2401) {
                     System.out.println("Такой товар не найден");
                 }
             }
 
-            if(2 == Character.getNumericValue(num.charAt(i))){
+            if (2 == Character.getNumericValue(num.charAt(i))) {
                 System.out.println("Укажите минимальное количество оперативной памяти в Мб");
                 String minimumMemory = scan.nextLine();
                 int intMinimumMemory = Integer.parseInt(minimumMemory);
                 for (Laptop temp : set) {
-                    if (intMinimumMemory > temp.randomAccessMemory){
+                    if (intMinimumMemory > temp.randomAccessMemory) {
                         setLaptop.remove(temp);
                     }
                 }
-                if (intMinimumMemory >= 4097){
+                if (intMinimumMemory >= 4097) {
                     System.out.println("Такой товар не найден");
                 }
             }
 
-            if(3 == Character.getNumericValue(num.charAt(i))){
+            if (3 == Character.getNumericValue(num.charAt(i))) {
                 System.out.println("Укажите минимальный размер диагонали");
                 String minimumDiagonal = scan.nextLine();
                 double doubleMinimumDiagonal = Double.parseDouble(minimumDiagonal);
                 for (Laptop temp : set) {
-                    if (doubleMinimumDiagonal > temp.diagonal){
+                    if (doubleMinimumDiagonal > temp.diagonal) {
                         setLaptop.remove(temp);
                     }
                 }
-                if (doubleMinimumDiagonal >= 21.6){
+                if (doubleMinimumDiagonal >= 21.6) {
                     System.out.println("Такой товар не найден");
                 }
             }
 
-            if(4 == Character.getNumericValue(num.charAt(i))){
+            if (4 == Character.getNumericValue(num.charAt(i))) {
                 System.out.println("Напишите желаемый вес ноутбука (минимальное значение)");
                 String minimumWeight = scan.nextLine();
                 double doubleMinimumWeight = Double.parseDouble(minimumWeight);
                 for (Laptop temp : set) {
-                    if (doubleMinimumWeight > temp.weight){
+                    if (doubleMinimumWeight > temp.weight) {
                         setLaptop.remove(temp);
                     }
                 }
-                if (doubleMinimumWeight >= 6.51){
+                if (doubleMinimumWeight >= 6.51) {
                     System.out.println("Такой товар не найден");
                 }
             }

@@ -1,12 +1,15 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class TelNumber {
-    private Map<String, List<String>> map = new HashMap<>();
+    private final Map<String, List<String>> map = new HashMap<>();
 
     void add(String telNum, String name) {
         if (map.containsKey(name)) {
-            List<String> telNumbers  = map.get(name);
+            List<String> telNumbers = map.get(name);
             telNumbers.add(telNum);
         } else {
             List<String> telNumbers = new ArrayList<>();
@@ -24,9 +27,9 @@ public class TelNumber {
         for (Map.Entry<String, List<String>> entry : entries) {
             List<String> telNumbers = entry.getValue();
             stringBuilder.append(entry.getKey())
-                         .append(" : ")
-                         .append(telNumbers)
-                         .append("\n");
+                    .append(" : ")
+                    .append(telNumbers)
+                    .append("\n");
         }
         return stringBuilder.toString();
     }
