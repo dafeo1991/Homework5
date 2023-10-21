@@ -11,12 +11,14 @@ import java.util.List;
 public class WorkerServise implements DataServis {
 
     List<Worker> workerList = new ArrayList<>();
+
     @Override
     public Worker create1(String name, String age, String workExperience, String maritalMtatus, String directorSalary) {
-        Director director= new Director(name, age, workExperience, maritalMtatus, directorSalary);
+        Director director = new Director(name, age, workExperience, maritalMtatus, directorSalary);
         workerList.add(director);
         return director;
     }
+
     @Override
     public Worker create2(String name, String age, String workExperience, String maritalMtatus, String directorSalary) {
         Manager manager = new Manager(name, age, workExperience, maritalMtatus, directorSalary);
@@ -30,7 +32,6 @@ public class WorkerServise implements DataServis {
         workerList.add(seller);
         return seller;
     }
-
 
 
     @Override

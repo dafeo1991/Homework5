@@ -13,7 +13,7 @@ public class Controll {
     WorkerView workerView;
 
     public Controll() {
-        this.dataServis =  new WorkerServise();
+        this.dataServis = new WorkerServise();
         this.workerView = new WorkerView();
     }
 
@@ -40,11 +40,6 @@ public class Controll {
         List<Worker> workers = dataServis.read1();
         workerView.viewWorkers(workers);
     }
-
-
-
-
-
 
 
 }

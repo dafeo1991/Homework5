@@ -2,7 +2,6 @@ package Homework5;
 
 import Homework5.controll.Controll;
 
-import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -49,7 +48,7 @@ public class Main {
         if (Objects.equals(num3, "1")) {
             System.out.println("До свидания!");
 
-        } else{
+        } else {
             main(args);
         }
 

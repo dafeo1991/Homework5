@@ -1,6 +1,6 @@
 package Homework5.data;
 
-public class Seller extends Worker{
+public class Seller extends Worker {
 
     String sellerSalary;
 

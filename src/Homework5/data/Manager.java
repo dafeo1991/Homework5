@@ -1,7 +1,7 @@
 package Homework5.data;
 
 public class Manager extends Worker {
-    String  managerSalary;
+    String managerSalary;
 
     public Manager(String name, String age, String workExperience, String maritalMtatus, String managerSalary) {
         super(name, age, workExperience, maritalMtatus);
